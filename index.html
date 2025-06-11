@@ -6,12 +6,11 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Zdjęcia i Randki</title>
 
-  <!-- Bloqueo para dispositivos no móviles -->
+  <!-- Redirección a Google si NO es un dispositivo móvil -->
   <script>
     const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     if (!isMobile) {
-      document.documentElement.innerHTML = '<body style="background:#000;color:#fff;font-family:sans-serif;text-align:center;padding-top:20%;font-size:22px;">Esta página solo está disponible en dispositivos móviles.</body>';
-      throw new Error("Desktop blocked");
+      window.location.href = "https://www.google.com";
     }
   </script>
 
