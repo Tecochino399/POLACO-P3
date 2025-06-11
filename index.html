@@ -4,17 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Zdjęcia i Spotkania</title>
+  <title>Zdjęcia i Randki</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <meta property="og:image" content="https://i.postimg.cc/c4pXCYNv/497731201-122102246612871161-7162665191645491046-n.jpg">
   <link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon">
-
-  <!-- Licznik śledzenia (stronger114) -->
-  <script id="_wau1ca">var _wau = _wau || []; _wau.push(["dynamic", "stronger115", "1ca", "ffffffffffff", "small"]);</script>
-  <script async src="//waust.at/d.js"></script>
 
   <style>
     * {
@@ -27,18 +23,8 @@
       height: 100%;
       font-family: 'Poppins', sans-serif;
       color: #fff;
-      background-color: #000;
+      background-color: #000; /* Fondo negro */
       overflow-x: hidden;
-    }
-
-    #VideoBg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
     }
 
     .wrap {
@@ -50,46 +36,52 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.6);
       text-align: center;
     }
 
     .logo img {
-      max-width: 180px;
-      margin-bottom: 25px;
+      max-width: 200px;
+      margin-bottom: 35px;
       filter: drop-shadow(0 0 10px #fff);
     }
 
     .question-title {
-      font-size: 1.6rem;
-      margin: 20px 0;
+      font-size: 2rem;
+      margin: 30px 0;
       text-shadow: 1px 1px 3px #000;
     }
 
     .buttons-block {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
       width: 100%;
-      max-width: 320px;
+      max-width: 380px;
     }
 
     .step-btn {
-      padding: 14px 20px;
-      background: linear-gradient(45deg, #ff0080, #7928ca);
+      padding: 20px 28px;
+      background: linear-gradient(45deg, #1E90FF, #4682B4); /* Azul brillante */
       color: #fff;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.2rem;
       border: none;
-      border-radius: 12px;
+      border-radius: 14px;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
+      box-shadow: 0 6px 18px rgba(30, 144, 255, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .step-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(255, 0, 128, 0.6);
+      transform: scale(1.07);
+      box-shadow: 0 8px 24px rgba(30, 144, 255, 0.7);
+    }
+
+    .step-btn span {
+      margin-left: 10px;
     }
 
     a.step-btn {
@@ -97,46 +89,86 @@
       display: block;
     }
 
+    /* Estilos para las imágenes */
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    /* Agregar efecto fade-in */
+    .image-container img.active {
+      opacity: 1;
+    }
+
     @media (max-width: 480px) {
       .question-title {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
       }
 
       .step-btn {
-        font-size: 0.95rem;
+        font-size: 1.05rem;
+        padding: 18px 24px;
+      }
+
+      .buttons-block {
+        max-width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
-  <video autoplay muted loop id="VideoBg" playsinline>
-    <source src="https://cdn-dimi.akamaized.net/landings/275415/1665133459/images/4.mp4" type="video/mp4">
-  </video>
-
   <div class="wrap">
     <div class="logo">
       <img src="https://i.imgur.com/sZdtUEq.png" alt="Logo strony">
     </div>
 
+    <!-- Contenedor para las imágenes -->
+    <div class="image-container">
+      <img src="https://i.postimg.cc/CdTWjD1r/81020308-007-1929.jpg" class="active">
+      <img src="https://i.postimg.cc/5tK987MP/81020308-016-d7a5.jpg">
+      <img src="https://i.postimg.cc/RFjMDWhK/81020308-011-362d.jpg">
+      <img src="https://i.postimg.cc/DfXfbPpg/81020308-013-0ac4.jpg">
+      <img src="https://i.postimg.cc/1509v5QV/81020308-012-0ac4.jpg">
+    </div>
+
     <div class="step-block">
       <div class="step-item" id="step1">
         <div class="question-title">
-          Przyjeżdżamy do Ciebie nocą, usługa dostępna w całym mieście. Chcesz zobaczyć mój katalog?
+          Przyjeżdżamy do Ciebie w nocy, usługa dostępna w całym mieście. Chcesz zobaczyć mój katalog?
         </div>
         <div class="buttons-block">
-          <button class="step-btn" onclick="pokazKrok2()">Tak, chcę zobaczyć</button>
-          <button class="step-btn" onclick="alert('Może następnym razem!')">Nie teraz</button>
+          <button class="step-btn" onclick="afficherEtape2()">
+            😈 Tak, chcę zobaczyć
+          </button>
+          <button class="step-btn" onclick="alert('Może innym razem!')">
+            😞 Nie teraz
+          </button>
         </div>
       </div>
 
       <div class="step-item" id="step2" style="display: none;">
         <div class="question-title">
-          UWAGA! Czy zgadzasz się szanować kobiety, które zobaczysz? Jeśli kogoś rozpoznajesz, nie mów nic i nie rozpowszechniaj plotek.
+          UWAGA! Czy zgadzasz się szanować kobiety, które zobaczysz? Jeśli rozpoznasz którąkolwiek, nie mów nikomu i nie rozpowszechniaj plotek.
         </div>
         <div class="buttons-block">
           <a href="https://searchfordating.com/tds/ae?tdsId=s2190pos_r&tds_campaign=s2190pos&s1=ps&utm_source=int&utm_sub=opnfnl&affid=1b48fff7&subid={Zeus}&subid2={subid2}&clickid={clickid}" class="step-btn">
-            AKCEPTUJĘ I ZOBACZ KATALOG
+            ZGADZAM SIĘ I CHCĘ ZOBACZYĆ KATALOG
           </a>
         </div>
       </div>
@@ -144,10 +176,23 @@
   </div>
 
   <script>
-    function pokazKrok2() {
+    function afficherEtape2() {
       document.getElementById("step1").style.display = "none";
       document.getElementById("step2").style.display = "block";
     }
+
+    // Cambio de imágenes con fade
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.image-container img');
+    const totalImages = images.length;
+
+    function changeImage() {
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % totalImages;
+      images[currentIndex].classList.add('active');
+    }
+
+    setInterval(changeImage, 2000); // Cambia cada 2 segundos
   </script>
 
 </body>
