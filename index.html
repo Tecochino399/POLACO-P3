@@ -40,51 +40,40 @@
       text-align: center;
     }
 
-    /* Logo centrado sobre las imágenes y tamaño ajustado */
+    /* Logo centrado sobre las imágenes y un poco más grande */
     .logo {
       position: absolute;
-      top: 8%; /* Mover un poco más hacia arriba */
+      top: 15%;
       z-index: 2;
     }
 
     .logo img {
-      max-width: 250px; /* Ajustamos un poco el tamaño */
-      margin-bottom: 20px;
+      max-width: 250px; /* Aumentamos el tamaño del logo */
+      margin-bottom: 35px;
       filter: drop-shadow(0 0 10px #fff);
     }
 
-    /* Estilo del texto */
     .question-title {
-      font-size: 1.7rem; /* Reducimos el tamaño del texto */
-      margin: 15px 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra oscura */
-      color: rgba(0, 0, 0, 0.8); /* Color oscuro */
-      position: absolute;
-      top: 22%; /* Mover un poco más arriba */
-      z-index: 2;
-      width: 90%;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
+      font-size: 1.8rem; /* Reducimos el tamaño del texto */
+      margin: 30px 0;
+      text-shadow: 1px 1px 3px #000;
     }
 
     .buttons-block {
       display: flex;
       flex-direction: column;
-      gap: 15px; /* Reducimos el espacio entre botones */
+      gap: 20px;
       width: 100%;
       max-width: 380px;
       z-index: 2; /* Asegura que los botones estén sobre las imágenes */
-      position: absolute;
-      top: 65%; /* Los botones más cerca de la parte inferior */
     }
 
     .step-btn {
-      padding: 18px 28px;
+      padding: 20px 28px;
       background: linear-gradient(45deg, #1E90FF, #4682B4); /* Azul brillante */
       color: #fff;
       font-weight: 600;
-      font-size: 1.2rem; /* Mantuvimos el tamaño de los botones */
+      font-size: 1.2rem;
       border: none;
       border-radius: 14px;
       cursor: pointer;
@@ -113,7 +102,7 @@
     .image-container {
       position: relative;
       width: 100%;
-      height: 60vh; /* Reducimos la altura de las imágenes */
+      height: 50vh; /* Reducimos la altura de las imágenes */
       max-width: 100%;
       overflow: hidden;
     }
@@ -136,11 +125,11 @@
 
     @media (max-width: 480px) {
       .question-title {
-        font-size: 1.4rem; /* Reducimos un poco más en móviles */
+        font-size: 1.4rem; /* Reducimos el tamaño del texto en móviles */
       }
 
       .step-btn {
-        font-size: 1.15rem;
+        font-size: 1.05rem;
         padding: 18px 24px;
       }
 
